@@ -1,0 +1,47 @@
+<ion-content>
+  <div class="container" mt4>
+    <ion-card>
+      <ion-card-header p4>
+        <ion-card-title fxLayout="row" pt6 fxLayoutAlign="center center">
+          <span class="register">
+            Register
+          </span>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content >
+        <div fxLayout="column" pb6 fxLayoutAlign="center center">
+          <form class="register" [formGroup]="registerForm" (ngSubmit)="register()">
+          <ion-item lines="inset">
+            <ion-label position="floating">First Name</ion-label>
+            <ion-input formControlName="firstName"></ion-input>
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label position="floating">Last Name</ion-label>
+            <ion-input formControlName="lastName"></ion-input>
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input formControlName="email" type="email"></ion-input>
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label position="floating">Password</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label position="floating">Re-enter Password</ion-label>
+            <ion-input formControlName="rePassword" type="password"></ion-input>
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label position="floating">Phone Number</ion-label>
+            <ion-input maxlength="10" formControlName="phone" (keypress)="utils.onlyNumber($event)" type="tel" ></ion-input>
+          </ion-item>
+          <div fxLayout="row" pt6 fxLayoutGap="10px" fxLayoutAlign="end center">
+            <ion-button color="medium" type="button">Cancel</ion-button>
+            <ion-button [disabled]="!registerForm.valid" type="submit">Submit</ion-button>
+          </div>
+        </form>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

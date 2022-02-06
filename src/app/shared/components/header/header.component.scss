@@ -1,0 +1,16 @@
+@import "../../../../styles/spacing.scss";
+
+.header {
+  &__top {
+    height: 60px;
+  }
+
+	&__top-right {
+		
+	}
+
+  &__nav {
+    border-top: 1px solid var(--gray-200);
+		@include pd(py3)
+  }
+}

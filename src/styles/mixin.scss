@@ -1,0 +1,10 @@
+@mixin menu {
+  font-size: var(--d4);
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+@mixin border($borderSide, $property) {
+  $borderSide : $property;
+}

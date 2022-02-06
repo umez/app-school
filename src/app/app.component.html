@@ -1,3 +1,16 @@
+<ion-menu side="start" contentId="main">
+  <ion-header>
+    <ion-toolbar color="tertiary">
+      <ion-title>Custom Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <app-nav></app-nav>
+  </ion-content>
+</ion-menu>
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-header class="ion-no-border" mode="md" [translucent]="true">
+    <app-header></app-header>
+  </ion-header>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

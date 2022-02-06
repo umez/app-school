@@ -1,0 +1,10 @@
+ion-card {
+  .register{
+    max-width: 500px;
+    width: 100%;
+
+    ion-item {
+      --padding-start: 0;
+    }
+  }
+}

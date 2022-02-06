@@ -1,0 +1,11 @@
+@import '../../styles/media-queries.scss';
+
+lib-login ::ng-deep ion-card {
+  width: 500px;
+  position: relative;
+  margin-top: -120px;
+
+  @include layout-bp(lt-md) {
+    width: 90%
+  }
+}

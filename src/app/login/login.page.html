@@ -1,0 +1,35 @@
+<ion-content>
+<!-- <lib-login height100></lib-login> -->
+
+<div class="container" mt4>
+  <ion-card>
+    <ion-card-header p4>
+      <ion-card-title fxLayout="row" pt6 fxLayoutAlign="center center">
+        <span class="register">
+          Login
+        </span>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content >
+      <div fxLayout="column" pb6 fxLayoutAlign="center center">
+        <form class="register" [formGroup]="loginForm" (ngSubmit)="register()">
+        <ion-item lines="inset">
+          <ion-label position="floating">Email Id</ion-label>
+          <ion-input formControlName="userName"></ion-input>
+        </ion-item>
+       
+        <ion-item lines="inset">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+        
+        <div fxLayout="row" pt6 fxLayoutGap="10px" fxLayoutAlign="end center">
+          <ion-button [disabled]="!loginForm.valid" type="submit">Submit</ion-button>
+        </div>
+      </form>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</div>
+
+</ion-content>

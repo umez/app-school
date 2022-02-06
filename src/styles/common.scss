@@ -1,0 +1,82 @@
+@import './media-queries.scss';
+html,
+body {
+  height: 100%;
+  font-size: var(--d4);  
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--gray-100);
+}
+
+*, h1, h2, h3, h4, h4, ul, li, ol, p {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ion-content {
+  --background: var(--gray-100);
+  top: 104px;
+
+  @include layout-bp(lt-md) {    
+    top: 40px;
+  }
+  
+}
+ion-item[pl-0] {
+  --padding-start: 0;
+}
+header, footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+.main {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  .top {    
+    flex: 1 0 auto;
+    flex-direction: column;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1256px;
+  margin: 0 auto;
+  @include layout-bp(lt-lg) {    
+    padding: 0 var(--d4);
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.home-product .mat-tab-label {
+  color: white;
+}
+
+.listed-ul {
+  margin: 0;
+  padding: 0 0 0 18px;
+  li {
+    list-style: disc;
+  }
+}
+
+app-header {
+  display: block;
+  height: auto;
+  @include layout-bp(lt-sm) {
+    height: 44px;
+  }
+}

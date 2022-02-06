@@ -1,0 +1,20 @@
+<header class="container header" height100 fxLayout="column">
+  <div fxLayout="row" class="header__top"  fxLayoutAlign="start center">
+    <ion-icon mr-2 fxHide.gt-sm (click)="openMenu()" name="menu"></ion-icon>
+    <ion-title>
+      LOGO
+    </ion-title>
+    <div fxLayout="row" fxHide.lt-md class="header__top-right">
+      <ion-button expand="block" routerLink="/register" type="outline" fill="clear" shape="round">
+        Sign up
+      </ion-button>
+
+      <ion-button color="primary" routerLink="/login" routerLinkActive="router-link-active" expand="block" shape="round">
+        Log in
+      </ion-button>
+    </div>
+  </div>
+  <div fxHide.lt-md fxLayout="row" class="header__nav" fxLayoutAlign="center center">
+    <app-nav ></app-nav>
+  </div>
+</header>
